@@ -2681,8 +2681,22 @@ body.nav-locked {
 
 .rise {
   opacity: 0;
-  transform: translate3d(0, 16px, 0);
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+  transform: translate3d(0, var(--rise-y), 0);
+  transition:
+    opacity var(--rise-time) var(--rise-ease),
+    transform var(--rise-time) var(--rise-ease);
+}
+
+.rise[data-dir="left"] {
+  transform: translate3d(calc(-1 * var(--rise-x)), 0, 0);
+}
+
+.rise[data-dir="right"] {
+  transform: translate3d(var(--rise-x), 0, 0);
+}
+
+.rise[data-dir="down"] {
+  transform: translate3d(0, calc(-1 * var(--space-12)), 0);
 }
 
 .rise.in {
@@ -2690,10 +2704,10 @@ body.nav-locked {
   transform: none;
 }
 
-.rise[data-delay="1"] { transition-delay: 0.1s; }
-.rise[data-delay="2"] { transition-delay: 0.2s; }
-.rise[data-delay="3"] { transition-delay: 0.3s; }
-.rise[data-delay="4"] { transition-delay: 0.4s; }
+.rise[data-delay="1"] { transition-delay: 0.08s; }
+.rise[data-delay="2"] { transition-delay: 0.16s; }
+.rise[data-delay="3"] { transition-delay: 0.24s; }
+.rise[data-delay="4"] { transition-delay: 0.32s; }
 
 @media (max-width: 1100px) and (min-width: 900px) {
   .nav-menu {
