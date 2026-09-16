@@ -1,0 +1,20 @@
+---
+description: Never use an em dash. Use an en dash in copy, titles, and comments.
+alwaysApply: true
+---
+
+# Punctuation
+
+Never write an em dash (U+2014, the long dash). Use an en dash (U+2013) for breaks, ranges, and title separators.
+
+```text
+Wrong: Kagunga Farms Company Limited — Njombe
+Right: Kagunga Farms Company Limited – Njombe
+
+Wrong: Fruit is picked for partners — packers and traders.
+Right: Fruit is picked for partners – packers and traders.
+```
+
+In the wrong lines above, the mark is the long em dash. In the right lines it is the shorter en dash.
+
+Do not use `--` or a hyphen where an en dash belongs. This applies to EN, SW, HTML, JS copy, comments, and generated pages.

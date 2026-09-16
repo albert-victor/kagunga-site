@@ -1,0 +1,28 @@
+---
+description: Kagunga Farms product, claims, IA, and what not to invent
+alwaysApply: true
+---
+
+# Kagunga product
+
+Kagunga Farms Company Limited is a Njombe, Tanzania agribusiness (avocado 27+ ha, livestock). Site must feel like a growing corporation, not a family-farm template.
+
+## Claims
+
+- Say production is **supplied to export-oriented partners/exporters**. Never “we export to Europe/India/Asia” unless the user confirms.
+- Do not invent projects, years, certs, volumes, buyers, processing plants, or awards.
+- Missing facts stay omitted or marked `PHOTO NEEDED` / `COPY NEEDED`. Never fill with stock or fake numbers.
+
+## IA (do not add pages)
+
+`/` `/about` `/agriculture` `/agriculture/avocado` `/livestock` `/livestock/poultry` `/livestock/dairy` `/livestock/beef` `/livestock/goats` `/sustainability` `/future` `/insights` `/contact` `/terms`
+
+Home is a **story**: hero → facts → intro → avocado → livestock → sustainability → future → partner CTA. Not a card dump.
+
+## Nav
+
+Clean conventional bar (user-approved): logo + Avocado, Poultry, Cattle, Goats, About us. Short dropdowns. EN/SW toggle. Hero may be a fade slideshow with a CTA per slide.
+
+## Stack
+
+Static HTML + CSS tokens + small JS. Serve with `npm start`. Do not add AOS, GSAP, jQuery, or Bootstrap.

@@ -1,0 +1,54 @@
+---
+description: Customer-facing copy and EN/SW i18n. Speak to the buyer. Never translate EN into short SW.
+alwaysApply: true
+globs: src/i18n/**/*.js, **/*.html
+---
+
+# Copy and i18n
+
+Kagunga copy talks to a buyer, packer, or partner. It never explains the page, the CMS, or the content policy.
+
+## Voice
+
+- Speak **to** the reader. Do not describe what “buyers usually ask.”
+- Never write meta lines: “this page is for…”, “each page / line / chapter…”, “ukurasa huu…”, “kila kazi ina ukurasa…”
+- Honesty is an invitation (“we confirm the week when you visit or write”), not a disclaimer (“we will not print Hass”, “hatuandiki…”).
+- Do not invent cultivar, tonnes, destinations, certs, or head counts. If a fact is missing, omit it. Do not narrate the omission.
+- Jargon stays out of heroes, titles, and CTAs: no `offtake`, `export-oriented`, `cultivar`, `programme`, `class of bird`.
+- Each service page must sound like that enterprise. Do not clone “See what we have / Products / The trade / Next step.”
+
+## i18n process (required)
+
+1. Write the **buyer sentence** in English.
+2. Write the **same meaning** in Kiswahili as a native would say it aloud in Njombe.
+3. Do **not** translate the English sentence. Matching word order is a fail.
+
+SW is a rewrite, not a locale file of EN.
+
+## Detect a bad SW line (use before shipping)
+
+Read the SW **without looking at EN**. If any of these is true, rewrite:
+
+- You need English in your head to understand it.
+- Word order and length copy the English (`Parachichi linalotoka shambani` ← “Avocado grown to leave the farm”).
+- Abstract EN kicker became a calque (`Export partners` → `Washirika wa nje`, `We are online` → `Tupo hewani`).
+- You could swap avocado/poultry/cattle nouns and the sentence would still work.
+- CTA is website-speak (`Angalia kuku`, `Fungua ukurasa`) instead of a human ask (`Uliza kuku`).
+
+## Examples
+
+```text
+Wrong EN: This page is for people who buy fruit.
+Wrong SW: Ukurasa huu ni kwa wanaonunua tunda.
+
+Right EN: More than 27 hectares of avocado in Njombe.
+Right SW: Zaidi ya hektari 27 za parachichi Njombe.
+```
+
+```text
+Wrong EN: Each line has its own page.
+Wrong SW: Kila kazi ina ukurasa wake.
+
+Right EN: One farm. Avocado, poultry, cattle, and goats.
+Right SW: Shamba moja. Parachichi, kuku, ng’ombe, na mbuzi.
+```

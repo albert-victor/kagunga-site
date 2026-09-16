@@ -1,0 +1,18 @@
+---
+description: Clean conventional navbar with short dropdowns and EN/SW
+alwaysApply: true
+---
+
+# Navigation
+
+Highland look. Conventional, short, clean – like a serious agribusiness, not a style studio.
+
+Desktop: circular logo + **Avocado · Poultry · Cattle · Goats · About us** + language toggle. The toggle is a rectangular ENG/SW control, not a globe icon and not the word “Kiswahili”. Each item is a small dropdown (2 links max). No search bar. No studio chips.
+
+Mobile: logo + Menu. Same five items inside.
+
+Labels must exist in EN and SW (`src/i18n/messages.js`). Word choice should sound natural in Kiswahili.
+
+Hero is a fade slideshow. Each slide has its own headline and CTA. Primary buttons use fill-up hover. Quiet CTAs use cinematic underline.
+
+Section entrance: identity.io fade-rise (`opacity` + `translateY`, once, stagger). No bounce, no AOS/GSAP.

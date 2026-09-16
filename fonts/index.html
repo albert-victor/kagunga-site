@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choose fonts – Kagunga Farms</title>
+    <script>
+      document.documentElement.dataset.pair = localStorage.getItem("kagunga.pair") || "a";
+    </script>
+    <link rel="preload" href="/public/fonts/lora-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/public/fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/site.css" />
+    <link rel="stylesheet" href="/src/styles/cards.css" />
+    <style>
+      .pair-page {
+        padding: var(--space-16) 0 var(--space-24);
+      }
+      .pair-grid {
+        display: grid;
+        gap: var(--space-8);
+        margin-top: var(--space-12);
+      }
+      .pair-card {
+        border: 1px solid var(--line);
+        background: var(--bg-white);
+        padding: var(--space-8);
+      }
+      .pair-card.is-on {
+        outline: 2px solid var(--forest);
+      }
+      .pair-card h2 {
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        margin-bottom: var(--space-2);
+      }
+      .pair-meta {
+        color: var(--ink-soft);
+        font-size: 0.88rem;
+        margin-bottom: var(--space-6);
+      }
+      .pair-sw {
+        margin-top: var(--space-4);
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--line);
+      }
+      .pair-card[data-show="a"] h2,
+      .pair-card[data-show="a"] h3 {
+        font-family: "Lora", Georgia, serif;
+      }
+      .pair-card[data-show="b"] h2,
+      .pair-card[data-show="b"] h3 {
+        font-family: "Source Serif 4", Georgia, serif;
+      }
+      .pair-card[data-show="c"] h2,
+      .pair-card[data-show="c"] h3 {
+        font-family: "Merriweather", Georgia, serif;
+      }
+      .pair-card p,
+      .pair-card button,
+      .pair-card .pair-meta {
+        font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      }
+      .pair-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        margin-top: var(--space-6);
+      }
+      @media (min-width: 900px) {
+        .pair-grid {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap pair-page">
+      <p class="kicker">Typography</p>
+      <h1>Choose the fonts for the whole site</h1>
+      <p class="measure">
+        Three pairings. Headings are a readable serif. Body text is the same Source Sans 3 in every option, so paragraphs, Kiswahili, and buttons stay clear. Click a card to preview this page, then lock it for every page.
+      </p>
+      <div class="pair-grid">
+        <article class="pair-card" data-show="a" data-pair="a">
+          <p class="kicker">Pairing 1</p>
+          <h2>Fruit grown to leave the farm</h2>
+          <p class="pair-meta">Headings: Lora · Writing: Source Sans 3</p>
+          <p>
+            Kagunga Farms Company Limited grows avocado and keeps livestock in the highlands. Partners visit the orchard. Buyers see the herds. Offtake is agreed from Magoda Street.
+          </p>
+          <div class="pair-sw">
+            <h3>Parachichi la milimani</h3>
+            <p>Hektari 27+. Tunda linachumwa kwa washirika wanaohudumia masoko ya nje.</p>
+          </div>
+          <div class="pair-actions">
+            <button class="btn btn-fill" type="button" data-preview="a">Preview</button>
+            <button class="btn btn-fill" type="button" data-choose="a">Use throughout the site</button>
+          </div>
+        </article>
+        <article class="pair-card" data-show="b" data-pair="b">
+          <p class="kicker">Pairing 2</p>
+          <h2>Fruit grown to leave the farm</h2>
+          <p class="pair-meta">Headings: Source Serif 4 · Writing: Source Sans 3</p>
+          <p>
+            Kagunga Farms Company Limited grows avocado and keeps livestock in the highlands. Partners visit the orchard. Buyers see the herds. Offtake is agreed from Magoda Street.
+          </p>
+          <div class="pair-sw">
+            <h3>Parachichi la milimani</h3>
+            <p>Hektari 27+. Tunda linachumwa kwa washirika wanaohudumia masoko ya nje.</p>
+          </div>
+          <div class="pair-actions">
+            <button class="btn btn-fill" type="button" data-preview="b">Preview</button>
+            <button class="btn btn-fill" type="button" data-choose="b">Use throughout the site</button>
+          </div>
+        </article>
+        <article class="pair-card" data-show="c" data-pair="c">
+          <p class="kicker">Pairing 3</p>
+          <h2>Fruit grown to leave the farm</h2>
+          <p class="pair-meta">Headings: Merriweather · Writing: Source Sans 3</p>
+          <p>
+            Kagunga Farms Company Limited grows avocado and keeps livestock in the highlands. Partners visit the orchard. Buyers see the herds. Offtake is agreed from Magoda Street.
+          </p>
+          <div class="pair-sw">
+            <h3>Parachichi la milimani</h3>
+            <p>Hektari 27+. Tunda linachumwa kwa washirika wanaohudumia masoko ya nje.</p>
+          </div>
+          <div class="pair-actions">
+            <button class="btn btn-fill" type="button" data-preview="c">Preview</button>
+            <button class="btn btn-fill" type="button" data-choose="c">Use throughout the site</button>
+          </div>
+        </article>
+      </div>
+      <p style="margin-top: var(--space-12)">
+        <a class="btn btn-line" href="/">Back to the home page</a>
+      </p>
+    </main>
+    <script>
+      const current = localStorage.getItem("kagunga.pair") || "a";
+      function mark(pair) {
+        document.documentElement.dataset.pair = pair;
+        document.querySelectorAll(".pair-card").forEach((card) => {
+          card.classList.toggle("is-on", card.dataset.pair === pair);
+        });
+      }
+      mark(current);
+      document.querySelectorAll("[data-preview]").forEach((button) => {
+        button.addEventListener("click", () => mark(button.dataset.preview));
+      });
+      document.querySelectorAll("[data-choose]").forEach((button) => {
+        button.addEventListener("click", () => {
+          localStorage.setItem("kagunga.pair", button.dataset.choose);
+          window.location.href = "/";
+        });
+      });
+    </script>
+  </body>
+</html>

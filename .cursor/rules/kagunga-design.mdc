@@ -1,0 +1,41 @@
+---
+description: Color, type, spacing, contrast – keep Kagunga editorial and consistent
+alwaysApply: true
+---
+
+# Design system
+
+All raw values live in `src/design/tokens.css`. Components use `var(--*)` only. No hex/rgb in page or component CSS.
+
+```css
+/* tokens.css – source of truth */
+:root {
+  --bg: #FFFFFF;
+  --bg-white: #FFFFFF;
+  --ink: #161C14;
+  --ink-soft: #4A5246;
+  --forest: #006400;
+  --forest-deep: #004100;
+  --earth: #8A734C;
+  --line: rgba(22, 28, 20, 0.10);
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem;
+  --space-12: 3rem; --space-16: 4rem; --space-24: 6rem; --space-32: 8rem;
+  --radius: 4px;
+  --measure: 38rem;
+  --wrap: 72rem;
+}
+```
+
+## Contrast (fail = ship-blocker)
+
+- Body/UI text vs `--bg` ≥ 4.5:1 (prefer ~7:1 with `--ink`).
+- Never light green, gold, or `--earth` as small text on white.
+- Never gray-on-gray placeholders. `--ink-soft` only for secondary, still ≥ 4.5:1.
+- Placeholder images: solid `--forest-deep`, not washed-out gray boxes.
+
+## Look
+
+Clean white page (`#FFFFFF`), lots of air. No cream, beige, or gray page fills. Section padding `--space-16`–`--space-32` desktop, `--space-12`–`--space-16` mobile. Buttons rectangular (`--radius`). No pill CTAs, no 16px card radius, no heavy shadows, no SaaS gradients, no emoji.
+
+Fonts: Lora (display) + Source Sans 3 (400/600). Self-host. No third family.

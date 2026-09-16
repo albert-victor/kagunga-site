@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" role="img" aria-label="Kagunga Farms">
+  <circle cx="40" cy="40" r="38" fill="#2F5A38"/>
+  <circle cx="40" cy="40" r="34" fill="#F4E7B0"/>
+  <path d="M14 48c8-2 14 2 26 2s18-4 26-2c-2 12-16 20-26 20S16 60 14 48Z" fill="#2F5A38"/>
+  <circle cx="52" cy="22" r="7" fill="#E2B23A"/>
+  <path d="M40 18c-3 8-1 14 2 20" stroke="#2F5A38" stroke-width="2.2" fill="none"/>
+  <ellipse cx="41" cy="44" rx="7" ry="10" fill="#2F5A38"/>
+  <ellipse cx="41" cy="46" rx="2.6" ry="3.4" fill="#F4E7B0"/>
+</svg>

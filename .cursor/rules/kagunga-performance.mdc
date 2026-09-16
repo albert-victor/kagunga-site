@@ -1,0 +1,33 @@
+---
+description: Fast on Tanzanian mobile – images, fonts, JS, and motion budget
+alwaysApply: true
+---
+
+# Performance and motion
+
+Budget: JS on home < 30KB gz. LCP = one hero image, `fetchpriority="high"`, never lazy. Everything below-fold lazy.
+
+## Do
+
+- Astro static HTML. CSS tokens, no runtime UI kit.
+- Self-host 2 WOFF2 files, `preload`, `font-display: swap`, subset Latin.
+- `<Image />` → AVIF/WebP, `sizes`, width/height set (no CLS).
+- `content-visibility: auto` on below-fold sections.
+- Motion: CSS opacity + 8–16px translate, 180–400ms. Hero scale max 1.03.
+
+## Do not
+
+- AOS, WOW, GSAP, jQuery, Nivo, Owl, Bootstrap, autoplay video, hero carousel.
+- Animate `top`, `left`, `width`, `height`.
+- Animate every card. One reveal per section, once.
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
+
+Reveal = ~20 lines of IntersectionObserver as an Astro island `client:visible`. If CSS-only is enough, skip JS.

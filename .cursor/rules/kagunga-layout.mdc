@@ -1,0 +1,30 @@
+---
+description: No horizontal scroll, mobile-first layout, breathing room, modern HTML
+globs: "**/*.{css,astro,html,svg}"
+alwaysApply: false
+---
+
+# Layout and responsive
+
+```css
+/* ✅ */
+html, body { overflow-x: clip; }
+.wrap { width: min(100% - 2 * var(--space-6), var(--wrap)); margin-inline: auto; }
+.bleed { width: 100%; margin-inline: 0; } /* not 100vw */
+
+/* ❌ */
+.hero { width: 100vw; margin-left: -20px; }
+.row { display: flex; } /* children without wrap/min-width:0 */
+```
+
+## Rules
+
+- Never `100vw` (includes scrollbar → horizontal scroll).
+- Flex/grid children: `min-width: 0` when text/media can overflow.
+- Images: `max-width: 100%; height: auto;`, explicit `aspect-ratio`, `object-fit: cover`.
+- Touch targets ≥ 44px. Thumb dock uses `padding-bottom: env(safe-area-inset-bottom)`.
+- Mobile is composed, not scaled-down desktop: stack mosaics, keep type editorial, do not hide Partner.
+- Body measure `--measure` for copy; do not full-width paragraphs on desktop.
+- Semantic tags: `header` `nav` `main` `footer` `section`. One `h1` per page. No layout tables, no spacer GIFs, no Bootstrap grid.
+
+If a section causes overflow, fix the element – do not `overflow-x: hidden` on `body` as the only solution (clip on html is backup, not an excuse for 100vw).

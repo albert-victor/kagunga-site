@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="sw">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title data-i18n="shot.meta">Card preview – Kagunga Farms</title>
+    <script>
+      document.documentElement.dataset.pair = localStorage.getItem("kagunga.pair") || "a";
+    </script>
+    <link rel="preload" href="/public/fonts/lora-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/public/fonts/source-sans-3-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/site.css" />
+    <link rel="stylesheet" href="/src/styles/cards.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header is-page" id="site-header">
+      <div class="wrap nav-bar">
+        <a class="logo" href="/">
+          <span class="logo-mark">
+            <img src="/public/art/kagunga-seal.png" width="108" height="118" alt="Kagunga Farms Company Limited" />
+          </span>
+          <span>Kagunga Farms</span>
+        </a>
+        <div class="nav-tools">
+          <a class="nav-partner" href="/" data-i18n="nav.home">Home</a>
+          <button class="lang" type="button" id="lang-toggle" aria-label="Change language">
+            <span class="lang-code" data-side="en">EN</span>
+            <span class="lang-track" aria-hidden="true">
+              <span class="lang-knob"></span>
+            </span>
+            <span class="lang-code is-on" data-side="sw">SW</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="shot-page">
+        <div class="wrap">
+          <div class="shot-lead rise">
+            <h1 data-i18n="shot.title">This is the card</h1>
+            <p data-i18n="shot.lead">A close copy of the pattern you sent. Farm photographs and real Kagunga copy. It is not on the live site yet.</p>
+          </div>
+          <div class="shot-stage">
+            <div class="shot-row">
+              <article class="shot-card">
+                <a class="shot-card__hit" href="/livestock/poultry">
+                  <img src="/public/photos/poultry-yard.png" alt="Rooster and hens in the yard" width="1152" height="864" />
+                  <span class="shot-card__veil" aria-hidden="true"></span>
+                  <span class="shot-card__badge"><i class="fas fa-feather" aria-hidden="true"></i><span data-i18n="nav.poultry">Poultry</span></span>
+                  <div class="shot-card__copy">
+                    <h2 data-i18n="live.poultry">Eggs and birds</h2>
+                    <p data-i18n="produce.poultry.text">A flock kept in Njombe Town. Eggs and live birds leave the yard. Meat birds are confirmed when they are on the farm that week.</p>
+                    <span class="shot-card__cta"><i class="fas fa-arrow-right" aria-hidden="true"></i><span data-i18n="shot.cta.poultry">Explore Poultry</span></span>
+                  </div>
+                </a>
+                <span class="shot-card__fav" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20s-7-4.35-9.15-8.1C.9 8.7 2.55 5.2 6.15 5.2c2 0 3.35 1.15 3.85 2.2.5-1.05 1.85-2.2 3.85-2.2 3.6 0 5.25 3.5 3.3 6.7C19 15.65 12 20 12 20z" />
+                  </svg>
+                </span>
+              </article>
+              <article class="shot-card">
+                <a class="shot-card__hit" href="/agriculture/avocado">
+                  <img src="/public/photos/avocado-close.png" alt="Avocados on the tree" width="1152" height="864" loading="lazy" />
+                  <span class="shot-card__veil" aria-hidden="true"></span>
+                  <span class="shot-card__badge"><i class="fas fa-leaf" aria-hidden="true"></i><span data-i18n="nav.avocado">Avocado</span></span>
+                  <div class="shot-card__copy">
+                    <h2 data-i18n="produce.avo.title">Orchard, fruit, and oil</h2>
+                    <p data-i18n="produce.avo.text">More than 27 hectares in Njombe. Fruit is supplied to export-oriented partners. Harvest, oil, and the trees are the crop as it stands.</p>
+                    <span class="shot-card__cta"><i class="fas fa-arrow-right" aria-hidden="true"></i><span data-i18n="shot.cta.avocado">Explore Avocado</span></span>
+                  </div>
+                </a>
+                <span class="shot-card__fav" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20s-7-4.35-9.15-8.1C.9 8.7 2.55 5.2 6.15 5.2c2 0 3.35 1.15 3.85 2.2.5-1.05 1.85-2.2 3.85-2.2 3.6 0 5.25 3.5 3.3 6.7C19 15.65 12 20 12 20z" />
+                  </svg>
+                </span>
+              </article>
+              <article class="shot-card">
+                <a class="shot-card__hit" href="/livestock/beef">
+                  <img src="/public/photos/cattle-herd.png" alt="Cattle on highland pasture" width="1280" height="720" loading="lazy" />
+                  <span class="shot-card__veil" aria-hidden="true"></span>
+                  <span class="shot-card__badge"><i class="fas fa-cow" aria-hidden="true"></i><span data-i18n="nav.cattle">Cattle</span></span>
+                  <div class="shot-card__copy">
+                    <h2 data-i18n="live.cattle">Beef and milk</h2>
+                    <p data-i18n="produce.cattle.text">One herd. Morning milk, manure returned to the land, and cattle sold live at the gate.</p>
+                    <span class="shot-card__cta"><i class="fas fa-arrow-right" aria-hidden="true"></i><span data-i18n="shot.cta.cattle">Explore Cattle</span></span>
+                  </div>
+                </a>
+                <span class="shot-card__fav" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20s-7-4.35-9.15-8.1C.9 8.7 2.55 5.2 6.15 5.2c2 0 3.35 1.15 3.85 2.2.5-1.05 1.85-2.2 3.85-2.2 3.6 0 5.25 3.5 3.3 6.7C19 15.65 12 20 12 20z" />
+                  </svg>
+                </span>
+              </article>
+            </div>
+          </div>
+          <p class="shot-note muted" data-i18n="shot.note">If this is the one, say apply. We will put it on every card.</p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/scripts/app.js"></script>
+  </body>
+</html>

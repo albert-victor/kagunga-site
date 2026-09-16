@@ -1,0 +1,296 @@
+@import url("../design/tokens.css");
+
+@font-face {
+  font-family: "Lora";
+  src: url("/public/fonts/lora-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/public/fonts/source-serif-4-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/public/fonts/merriweather-700.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/public/fonts/source-sans-3-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("/public/fonts/source-sans-3-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+html[data-pair="a"] {
+  --font-display: "Lora", "Georgia", serif;
+  --font: "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+html[data-pair="b"] {
+  --font-display: "Source Serif 4", "Georgia", serif;
+  --font: "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+html[data-pair="c"] {
+  --font-display: "Merriweather", "Georgia", serif;
+  --font: "Source Sans 3", "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  src: url("/public/fonts/fa-solid-900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  src: url("/public/fonts/fa-brands-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fas,
+.fa-solid,
+.fab,
+.fa-brands {
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fas,
+.fa-solid {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.fab,
+.fa-brands {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa-bars::before { content: "\f0c9"; }
+.fa-chevron-down::before { content: "\f078"; }
+.fa-location-dot::before { content: "\f3c5"; }
+.fa-leaf::before { content: "\f06c"; }
+.fa-seedling::before { content: "\f4d8"; }
+.fa-cow::before { content: "\f6c8"; }
+.fa-egg::before { content: "\f7fb"; }
+.fa-handshake::before { content: "\f2b5"; }
+.fa-file-lines::before { content: "\f15c"; }
+.fa-phone::before { content: "\f095"; }
+.fa-envelope::before { content: "\f0e0"; }
+.fa-arrow-right::before { content: "\f061"; }
+.fa-check::before { content: "\f00c"; }
+.fa-users::before { content: "\f0c0"; }
+.fa-mountain::before { content: "\f6fc"; }
+.fa-clipboard-check::before { content: "\f46c"; }
+.fa-truck::before { content: "\f0d1"; }
+.fa-recycle::before { content: "\f1b8"; }
+.fa-building::before { content: "\f1ad"; }
+.fa-earth-africa::before { content: "\f57c"; }
+.fa-droplet::before { content: "\f043"; }
+.fa-binoculars::before { content: "\f1e5"; }
+.fa-scale-balanced::before { content: "\f24e"; }
+.fa-feather::before { content: "\f52d"; }
+.fa-heart::before { content: "\f004"; }
+.fa-wheat-awn::before { content: "\e2cd"; }
+.fa-circle-info::before { content: "\f05a"; }
+.fa-warehouse::before { content: "\f494"; }
+  .fa-xmark::before { content: "\f00d"; }
+.fa-whatsapp::before { content: "\f232"; }
+.fa-facebook-f::before { content: "\f39e"; }
+.fa-instagram::before { content: "\f16d"; }
+.fa-linkedin-in::before { content: "\f0e1"; }
+.fa-paper-plane::before { content: "\f1d8"; }
+.fa-comments::before { content: "\f086"; }
+.fa-comment-dots::before { content: "\f4ad"; }
+.fa-globe::before { content: "\f0ac"; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--forest);
+}
+
+:focus-visible {
+  outline: var(--focus);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute;
+  left: var(--space-4);
+  top: 0;
+  z-index: 80;
+  transform: translateY(-140%);
+  background: var(--forest);
+  color: var(--on-dark);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+}
+
+.skip:focus {
+  transform: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.wrap {
+  width: min(100% - 2 * var(--space-6), var(--wrap));
+  max-width: 100%;
+  margin-inline: auto;
+  min-width: 0;
+}
+
+.measure {
+  max-width: var(--measure);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--forest-deep);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: clamp(1.85rem, 4vw, 2.7rem);
+}
+
+h2 {
+  font-size: clamp(1.45rem, 2.8vw, 2.05rem);
+}
+
+h3 {
+  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+}
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+.kicker {
+  margin: 0 0 var(--space-3);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--forest);
+}
+
+.section > .wrap > .kicker::after,
+.intro-inner > .kicker::after,
+.band-copy > .kicker::after {
+  content: "";
+  display: block;
+  width: 1.65rem;
+  height: 2px;
+  margin-top: var(--space-2);
+  background: var(--gold);
+}
+
+.muted {
+  color: var(--ink);
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-6);
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+}
+
+.crumbs a {
+  color: var(--forest);
+  text-decoration: none;
+}
+
+.crumbs a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}

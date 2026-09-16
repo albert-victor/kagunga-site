@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 48" preserveAspectRatio="xMidYMid slice">
+  <path fill="#1EB53A" d="M0 0h72L0 48z"/>
+  <path fill="#00A3DD" d="M72 48H0L72 0z"/>
+  <path fill="#FCD116" d="M0 36.5L54.8 0H72v11.5L17.2 48H0z"/>
+  <path fill="#000" d="M0 40.2L60.3 0H72v7.8L11.7 48H0z"/>
+</svg>

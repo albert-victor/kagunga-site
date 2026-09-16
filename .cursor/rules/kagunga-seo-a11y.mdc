@@ -1,0 +1,33 @@
+---
+description: Accessible, SEO-ready markup – focus, alt, metadata, schema accuracy
+globs: "**/*.{astro,html,md,ts}"
+alwaysApply: false
+---
+
+# SEO and accessibility
+
+## Accessibility
+
+- Skip link to `#main`. Visible focus ring (`outline: 2px solid var(--forest); outline-offset: 3px`). Never `outline: none` alone.
+- Chapter triggers are `<button aria-expanded aria-controls>`. Escape closes. Hover is not the only way in.
+- Thumb dock: `nav aria-label="Primary"` + `aria-current="page"`.
+- Alt: describe the scene (“Avocado trees on Kagunga plantation, Njombe”). Empty alt only if decorative.
+- Forms: `<label for>`, errors in text. Contrast stays AA in focus/hover too.
+
+## SEO
+
+Each page: unique title, meta description, canonical, Open Graph. `sitemap.xml` + `robots.txt`.
+
+JSON-LD `Organization` is fine. `LocalBusiness` only with a confirmed address. Breadcrumb schema on inner pages.
+
+Copy is factual and sparse. No keyword stuffing. Heading order: h1 → h2 → h3, no skips.
+
+```html
+<!-- ❌ -->
+<img src="hero.jpg">
+<a href="/contact" style="outline:none">Click here</a>
+
+<!-- ✅ -->
+<img src="hero.jpg" width="2400" height="1350" alt="Avocado canopy across Kagunga plantation in Njombe" />
+<a href="/contact">Partner with us</a>
+```
